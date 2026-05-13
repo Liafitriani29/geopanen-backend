@@ -16,6 +16,8 @@ use App\Http\Controllers\MonitoringPrediksiController;
 use App\Http\Controllers\RekomendasiPrediksiController;
 use App\Http\Controllers\CatatanPenyuluhController;
 use App\Http\Controllers\AktualProduksiBulananController;
+use App\Http\Controllers\GisMonitoringController;
+use App\Http\Controllers\GisPrediksiController;
 
 // RESET PASSWORD
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -103,3 +105,5 @@ Route::put('/aktual-produksi-bulanan/{id}', [AktualProduksiBulananController::cl
 Route::delete('/aktual-produksi-bulanan/{id}', [AktualProduksiBulananController::class, 'destroy']);
 
 Route::get('/tes/evaluasi-aktual', [TesController::class, 'evaluasiAktual']);
+Route::get('/gis/monitoring', [GisMonitoringController::class, 'index']);
+Route::get('/gis/prediksi-kecamatan', [GisPrediksiController::class, 'prediksiKecamatan']);
